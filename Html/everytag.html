@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everytag</title>
+    <style>
+      td,th,table{
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header.head>h1{This is a header} -->
+    <header class="head">
+      <h1>This is a header</h1>
+      <hr />
+    </header>
+    <!-- nav.nav>a[href="#"].navtag*5 -->
+    <nav class="nav">
+      <a href="#" class="navtag">Home</a>
+      <a href="#" class="navtag">Nextpage</a>
+      <a href="#" class="navtag">Page3</a>
+      <a href="#" class="navtag">Page4</a>
+      <a href="#" class="navtag" download >Download</a>
+      <a href="#" class="navtag rightalign">about</a>
+      <hr />
+    </nav>
+    <main>
+      <section>
+        <!-- table>.row>.col{col $}*3 -->
+        <table>
+          <tr class="row">
+            <td class="col">col1</td>
+            <td class="col">col2</td>
+            <td class="col">col3</td>
+          </tr>
+        </table>
+        <hr />
+        <!-- ul>li.sample$@-*5   -->
+        <ul>
+          <li class="sample5">sample 5</li>
+          <li class="sample4">sample 4</li>
+          <li class="sample3">sample 3</li>
+          <li class="sample2">sample 2</li>
+          <li class="sample1">sample 1</li>
+        </ul>
+
+        <!-- ol>li.item$@3*5{item $@3} -->
+        <ol>
+          <li class="item3">item 3</li>
+          <li class="item4">item 4</li>
+          <li class="item5">item 5</li>
+          <li class="item6">item 6</li>
+          <li class="item7">item 7</li>
+        </ol>
+        <hr />
+      </section>
+      <section>
+        <h1>This is h1</h1>
+        <h2>This is h2</h2>
+        <h3>This is h3</h3>
+        <h4>This is h4</h4>
+        <h5>This is h5</h5>
+        <h6>This is h6</h6>
+        <hr />
+      </section>
+      <section>
+        <p >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
+          labore minima deserunt impedit! Omnis tempore eveniet, laboriosam
+          minus in non ex labore aspernatur autem quibusdam ad neque a itaque
+          consequatur enim rem harum, eum quaerat maiores unde facilis
+          distinctio blanditiis? Cupiditate nulla maxime possimus inventore hic
+          quas dicta, aspernatur tempora vero fugiat autem amet?
+          <br />
+          Rem nulla totam laborum hic expedita deleniti fuga, tenetur atque
+          autem iste reiciendis sequi fugiat ducimus, voluptatibus ea nam saepe
+          culpa dignissimos ut provident? Quidem tempore, illum dolores aut
+          dolore veniam, deserunt maiores omnis maxime consequuntur doloremque
+          officiis eligendi provident neque explicabo nisi libero et architecto.
+        </p>
+        <marquee behavior="scroll" direction="up">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
+            labore minima deserunt impedit! Omnis tempore eveniet, laboriosam
+            minus in non ex labore aspernatur autem quibusdam ad neque a itaque
+            consequatur enim rem harum, eum quaerat maiores unde facilis
+            distinctio blanditiis? Cupiditate nulla maxime possimus inventore
+            hic quas dicta, aspernatur tempora vero fugiat autem amet? Rem nulla
+            totam laborum hic expedita deleniti fuga, tenetur atque autem iste
+            reiciendis sequi fugiat ducimus, voluptatibus ea nam saepe culpa
+            dignissimos ut provident? Quidem tempore, illum dolores aut dolore
+            veniam, deserunt maiores omnis maxime consequuntur doloremque
+            officiis eligendi provident neque explicabo nisi libero et
+            architecto.
+          </p>
+        </marquee>
+        <hr />
+      </section>
+      <section>
+        <abbr title="Shrinath Korajkar">abbrivation</abbr>
+        <br>
+        <cite>this is cite</cite>
+        <address>i am ironman</address>
+        <p>
+          <b> this is bold </b>&ThickSpace;
+          <u> this is underline </u>&ThickSpace;
+          <i> this is italics </i>&ThickSpace;
+          <bdo dir="rtl"> this is right to left </bdo>&ThickSpace;
+          <blockquote> "this is quoted" </blockquote>&ThickSpace;
+          <code> public static void main(){
+              int a ;
+          } 
+          </code>&ThickSpace;
+          <del>this text is deleted</del>&ThickSpace;
+          <dfn>this text will be defined</dfn>&ThickSpace;
+          <em>emphasised text</em>&ThickSpace;
+          <mark>marked text</mark>&ThickSpace;
+          <q>quotation</q>&ThickSpace;
+          <s>this is no longer correct</s>&ThickSpace;
+          <kbd>keyboard input</kbd>&ThickSpace;
+          <pre>
+            <p>\pre formatted </p>
+          </pre>
+        </p>
+        <p  contenteditable="true"> this is editable content</p>
+        <p draggable="true">this is draggable</p>
+        <hr>
+      </section>
+     <section>
+        <p>metric value
+        <meter value="50" min="0" max="100" high="80" low="30" optimum="50" ></meter>progress
+        <progress max="100"></progress></p>
+        <var>variable</var>
+        <hr>
+     </section>
+     <section>
+       <form action="#" method="get" id="form1" autocomplete="on" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+         <h2>FORM</h2>
+         <p>button input :<input type="button" form="form1" name="button" id="button"  value="submit"></p>
+         <p>checkbox :
+              <input type="checkbox" name="checkbox" id="checkbox">check1
+              <input type="checkbox" name="checkbox" id="checkbox" checked>check2
+              <input type="checkbox" name="checkbox" id="checkbox" checked>check3
+              <input type="checkbox" name="checkbox" id="checkbox">check4
+         </p>
+         <p>color :<input type="color" name="color" id="color"></p>
+         <p>date :<input type="date" name="date" id="date"></p>
+         <p>datetime :<input type="datetime" name="datetime" id="datetime"></p>
+         <p>datetime-local :<input type="datetime-local" name="datetime-local" id="datetime-local"></p>
+         <p>email :<input type="email" name="email" id="email" required></p>
+         <p>file :<input type="file" name="file" id="file" accept="image/*"></p>
+         <p>hidden :<input type="hidden" name="hidden" id="hidden"></p>
+         <p>image :<input type="image" name="image" id="image"  ></p>
+         <p>month :<input type="month" name="month" id="month"></p>
+         <p>number :<input type="number" name="number" id="number"></p>
+         <p>password :<input type="password" name="password" id="password"> </p>
+         <p>radio :<input type="radio" name="radio" id="radio" checked>male
+                   <input type="radio" name="radio" id="radio">female
+         </p>
+         <p>range :<input type="range" name="range" id="range"></p>
+         <p>reset :<input type="reset" name="reset" id="reset">  </p>
+         <p>search :<input type="search" pattern="[a-z]" lang="en" name="search" id="search"> </p>
+         <p>submit input:<input type="submit" autofocus formaction="#" name="submit" id="submit"></p>
+         <p>tel :<input type="tel" multiple name="tel" id="tel"></p>
+         <p>text :<input type="text" spellcheck="true" name="text" id="text"></p>
+         <p>url :<input type="url" name="url" id="url"></p>
+         <p>time :<input type="time" name="time" id="time"></p>
+         <p>week :<input type="week" name="week" id="week"></p>
+         <p>textarea : <textarea maxlength="100" wrap="hard" name="texta" id="texta" cols="50" rows="10" ></textarea></p>
+         <fieldset>
+           <legend>fieldset</legend>
+            <p>button : <button type="submit">submit</button>&ThickSpace;
+                     <button type="reset">reset</button>
+                     <button disabled="disabled">disabled</button>
+            </p>
+        </fieldset>
+         <p>select :
+             <select name="sel" id="sel">
+                <option value="" selected>select options</option>
+                  <option value="option1">option1</option>
+                  <option value="option2">option2</option>
+                  <option value="option3">option3</option>
+                  <option value="option4">option4</option>
+              </select>
+        </p>
+        <p><label for="choosed">choose from datalist : </label><input list="choose" name="choosed" id="choosed"></p>
+        <datalist id="choose">
+              <option value="option1">option1</option>
+              <option value="option2"></option>
+              <option value="option3"></option>
+              <option value="option4"></option>
+              <option value="option5"></option>
+        </datalist>
+        <p>output : 
+          <input type="number" name="a" id="a" value="50">
+          +<input type="number" name="b" id="b" value="50">
+          =<output name="x" for="a b"></output>
+        </p>
+       </form>
+       <hr>
+     </section>
+     <section>
+       <h1>media</h1>
+       <p>iframe : <iframe src="https://www.google.com" frameborder="0" ></iframe></p>
+       <p>image :<img src="../Img/BlackAndWhite01.jpg" alt="image" width="100px" height="100px"></p>
+       <p>map : 
+         <img src="../Img/image.jpg" alt="img" width="100px" usemap="#map">
+         <map name="map">
+           <area shape="circle" coords="50,50,50,50" href="../Html/page2.html" alt="map">
+         </map>
+       </p>
+       <p>figure and figure caption :
+         <figure>
+           <img src="../Img/BlackAndWhite02.jpg" alt="img" width="100px" height="100px">
+           <figcaption>fig mountain</figcaption>
+         </figure>
+       </p>
+       <p>picture :
+         <picture>
+          <img src="../Img/MinimalistScenery01.jpg" alt="Flowers" style="width:50px ; height: 50px;">
+          <img src="../Img/MinimalistScenery02.jpg" alt="Flowers" style="width:100px;height: 50px;">
+          <img src="../Img/MinimalistScenery07.jpg" alt="Flowers" style="width:200px;height: 50px;">
+         </picture>
+       </p>
+       <p>svg graphics :
+        <svg width="100" height="100">
+          <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+       </p>
+       <p>audio : 
+         <audio controls >
+          <!-- <audio src="../music/Phoenix-Worlds-2019-League-of-Legends.mp3" controls></audio> -->
+          <source src="../music/Phoenix-Worlds-2019-League-of-Legends.mp3" type="audio/mpeg">
+         </audio>
+      </p>
+      <p>video : 
+        <video src="../Video/froggif.mp4" controls autoplay loop muted>
+        </video>
+      </p>
+      <hr>
+     </section>
+     <section>
+       <h2>List and Table</h2>
+       <ul>
+         <li>unordered list1</li>
+         <li>unordered list2</li>
+         <li>unordered list3</li>
+         <li>unordered list4</li>
+       </ul>
+       <ol start="2" type="1">
+         <li>ordered list1</li>
+         <li>ordered list2</li>
+         <li>ordered list3</li>
+         <li>ordered list4</li>
+       </ol>
+       <dl>
+         <dt>description list</dt>
+         <dt>coffee :</dt>
+         <dd>this is coffee</dd>
+         <dt>banana :</dt>
+         <dd>this is banana</dd>
+       </dl>
+       <table>
+         <caption>table caption</caption>
+          <thead>
+            <tr>
+              <th> table header1</th>
+              <th> table header2</th>
+              <th> table header3</th>
+            </tr>
+          </thead>
+          <tbody>
+         <tr>
+           <td>cell1</td>
+           <td>cell2</td>
+           <td>cell3</td>
+           <td rowspan="3"  style="text-align: center;">rowspan</td>
+         </tr>
+         <tr>
+           <td>cell4</td>
+           <td>cell5</td>
+           <td>cell6</td>
+         </tr>
+         <tr>
+         
+           <td>cells7</td>
+           <td>cells8</td>
+           <td>cells9</td>
+           
+         </tr>
+         <tr>
+           <td colspan="2" style="text-align: center;">colspan</td>
+           
+         </tr>
+        </tbody>
+       </table>
+       <hr>
+     </section>
+     <section>
+       <h2>style and semantics</h2>
+       <div style="background-color: bisque;">this is div</div><br>
+       <span style="background-color: bisque;">this is span</span>
+       <hr>
+     </section>
+     <section>
+       <dialog open ><p>dialog box</p></dialog>
+       <details>
+         <summary>this is details summary</summary>
+         <p>this is visible if you want</p>
+       </details>
+       <hr>
+     </section>
+    </main>
+    <article>
+      <h3>this is article</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aut eligendi praesentium, doloremque suscipit cum excepturi officia optio velit pariatur vel ipsum dolore vero necessitatibus aliquid alias commodi quisquam nostrum architecto porro id quo, omnis hic ex. Soluta aperiam delectus quidem officia molestiae illum itaque laudantium nobis eius pariatur nisi excepturi fugiat libero est incidunt iure magnam sit molestias cupiditate neque, ipsum provident et officiis nam. Deserunt porro libero odio dolorem atque, placeat voluptate cum optio velit! Omnis eveniet vel asperiores culpa temporibus nemo natus nesciunt fugiat odit, accusantium provident esse ex fugit beatae quidem hic quisquam dicta sit! Tempora?</p>
+      <hr>
+    </article>
+    <aside>
+      <h3>this is aside</h3>
+      <p>  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias sed, laborum velit molestiae possimus temporibus itaque esse ducimus commodi quia tempora dolorum. Molestiae ratione id ab. Adipisci facilis possimus dolore error deserunt modi neque aliquid! Magnam dignissimos beatae quos enim, nesciunt cupiditate fugiat, blanditiis quasi et repellat commodi ea! Assumenda?</p>
+      <hr>
+    </aside>
+    <footer>
+      <p> this is footer</p>
+    </footer>
+  </body>
+</html>

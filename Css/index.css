@@ -1,0 +1,282 @@
+* {
+  margin: 5px;
+}
+
+/* Element Selector */
+h1 {
+  color: rgba(236, 17, 17, 0.664);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-display: inherit;
+  background-color: bisque;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: auto;
+  /* caret-color: rgb(226, 23, 23); */
+}
+
+/* p {
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+  } */
+
+/* header h1 {
+    background-image: url("seema.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: absolute;
+  } */
+
+p {
+  font: italic bold 16px normal;
+  word-spacing: 5px;
+}
+
+/* contextual Selector */
+header h1 {
+  background: bisque url("img/MinimalistScenery01.jpg") no-repeat center;
+  background-size: cover;
+}
+
+table,
+tr,
+td,
+th,
+ol {
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid black;
+  border-collapse: collapse;
+  border-spacing: 5px;
+}
+
+nav {
+  background-color: rgb(0, 0, 0);
+  float: inline-start;
+  overflow: auto;
+  word-spacing: 2cm;
+}
+
+a {
+  font-size: larger;
+  text-decoration: solid;
+  color: rgb(255, 0, 0);
+}
+
+/* pseudo Selector */
+a:hover {
+  color: green;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+img {
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  clip-path: circle();
+}
+
+footer {
+  padding: 5px;
+}
+
+/* id Selector */
+div#layer1 {
+  /* z-index: 1;
+  position: absolute; */
+  border: 1px solid black;
+  /* top: 1000px;
+  left: 20px; */
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(0, 0, 255, 0.815);
+}
+
+div#layer2 {
+  /* z-index: 2;
+  position: absolute; */
+  border: 1px solid black;
+  /* top: 1020px;
+  left: 40px; */
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: blue;
+}
+
+div#layer3 {
+  /* z-index: 3;
+  position: absolute; */
+  border: 1px solid black;
+  /* top: 1040px;
+  left: 60px; */
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: blue;
+}
+
+/* class Selector */
+.box {
+  background-color: blanchedalmond;
+  margin: 1px;
+  box-sizing: border-box;
+  padding: 19px;
+}
+
+.response {
+  column-count: 4;
+  column-fill: balance;
+  column-gap: 10px;
+}
+
+@media all and (min-width: 1000px), (orientation: landscape) {
+  .response {
+    column-gap: 10px;
+  }
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  .response {
+    column-gap: 20px;
+    column-count: 2;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .response {
+    column-gap: 40px;
+    column-count: 1;
+  }
+}
+
+.imgfloat {
+  float: right;
+}
+
+/* p {
+  clear: right;
+} */
+
+.flex {
+  display: flex;
+  background-color: darkgrey;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  color: white;
+  /* animation: changecolor 4s linear 0s infinite alternate backwards running; */
+}
+
+.grid {
+  display: grid;
+  /* grid-template-columns: 200px 200px 200px;
+  grid-template-columns: repeat(3, 1fr); fraction */
+  grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+  grid-template-rows: 100px 100px;
+  gap: 20px;
+  /* grid-auto-rows: 100px;*/
+  grid-auto-columns: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.gridbox {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: chocolate;
+  color: aliceblue;
+  text-align: center;
+  overflow: auto;
+}
+
+/* #gb2 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+} */
+
+#gb1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nested {
+  border: 2px solid blue;
+}
+
+.gola {
+  height: 100px;
+  width: 100px;
+  background: red;
+  cursor: pointer;
+  transition: width 2s, height 2s, border-radius 2s, background 2s;
+}
+
+.gola:hover {
+  height: 200px;
+  width: 200px;
+  background-color: greenyellow;
+  border-radius: 50%;
+}
+
+.anim {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  vertical-align: top;
+  border-radius: 50%;
+  background-color: green;
+  cursor: pointer;
+  animation: bouncing 2s linear 0s infinite alternate both;
+}
+
+@keyframes bouncing {
+  0% {
+    left: 0;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0);
+  }
+  50% {
+    left: 100px;
+    /* lbox-shadow: 0 50px 55px rgb(0, 0, 0); */
+  }
+  100% {
+    left: 200px;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0);
+  }
+}
+
+/* @keyframes changecolor {
+  from {
+    background-color: darkgrey;
+  }
+  to {
+    background-color: red;
+  }
+} */
+
+
+/* Emmet */
+/* attribute Selector */
+.container[title='hello']{
+
+  /* p0+m0+bgc:red+fs:2r+bd:2r-solid-black */
+
+  padding: 0;
+  margin: 0;
+  background-color: red;
+  font-style: 2rem;
+  border: 2rem solid black;
+}

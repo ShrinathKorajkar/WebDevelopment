@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  /* text-decoration: none; */
+}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 15px 30px;
+  padding: 5px;
+  font-size: 16px;
+}
+.container {
+  background-color: rgba(241, 10, 10, 0.116);
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightslategrey;
+  border-radius: 3px;
+}
+
+p > input,
+select,
+textarea {
+  width: 100%;
+  background-color: aliceblue;
+  border: 1px solid lightslategrey;
+  padding: 12px;
+  border-radius: 5px;
+}
+fieldset {
+  background-color: aliceblue;
+  border: 1px solid lightslategray;
+}
+.heading {
+  text-align: center;
+}
+input[type="submit"] {
+  width: 100%;
+  border: none;
+  color: crimson;
+  background-color: aqua;
+  font-weight: 900;
+  font-size: large;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+}

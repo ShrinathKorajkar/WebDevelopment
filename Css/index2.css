@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root{
+    --myColor: red
+}
+
+header::after{
+    content: "";
+    background: url(../Img/MinimalistScenery01.jpg) no-repeat center;
+    position: absolute;
+    background-size: 100vw;
+    height: 90vh;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+nav{
+    padding: 0.2vw;
+    background-color: coral;
+}
+
+nav a{
+    text-decoration:none;
+    margin-left: 2vw;
+    font-weight: bold;
+    font-size: 4vh;
+    color: black;
+}
+
+.container{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    font-size: 2rem;
+    box-shadow: 1px 1px 2px 2px var(--myColor);
+}
