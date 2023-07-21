@@ -12,14 +12,16 @@
 // DATE AND TIME
 let now = new Date(); // we can give explicit date also
 console.log(now);
-console.log("Time : ",now.getTime());
-console.log("date : ",now.getDate());
-console.log("month : ",now.getMonth());
-console.log("day : ",now.getDay());
-console.log("year : ",now.getFullYear());
-console.log("hours : ",now.getHours());
-console.log("minutes : ",now.getMinutes());
-console.log("seconds : ",now.getSeconds());
+console.log("Time : ", now.getTime());
+console.log("date : ", now.getDate());
+console.log("month : ", now.getMonth());
+console.log("day : ", now.getDay());
+console.log("year : ", now.getFullYear());
+console.log("hours : ", now.getHours());
+console.log("minutes : ", now.getMinutes());
+console.log("seconds : ", now.getSeconds());
+console.log("seconds : ", now.toDateString());
+console.log("seconds : ", now.toLocaleDateString());
 now.setHours(3);
 
 
@@ -30,7 +32,7 @@ now.setHours(3);
 
 
 // LOCAL STORAGE AND SESSION STORAGE
-let myArr = ["Shri","Prc","Teju","Rutika"];
+let myArr = ["Shri", "Prc", "Teju", "Rutika"];
 localStorage.setItem('first', JSON.stringify(myArr)); // store as key value
 localStorage.setItem('second', 'hello');
 let names2 = JSON.parse(localStorage.getItem('first'));
@@ -48,8 +50,8 @@ sessionStorage.setItem('first', 'I am iron man');
 
 // MATH
 console.log(Math.random()); // between 0 and 1
-console.log(100*Math.random()); // between 0 and 100
-console.log(Math.ceil(50 + (100-50)*Math.random())); // between 50 and 100
+console.log(100 * Math.random()); // between 0 and 100
+console.log(Math.ceil(50 + (100 - 50) * Math.random())); // between 50 and 100
 
 
 
@@ -60,14 +62,14 @@ console.log(Math.ceil(50 + (100-50)*Math.random())); // between 50 and 100
 
 // JSON 
 let jsonObj = {
-    name : 'shri',
-    age : 21,
-    friend : 'Prc'
+    name: 'shri',
+    age: 21,
+    friend: 'Prc'
 };
 console.log(jsonObj);
 
 let myJsonStr = JSON.stringify(jsonObj);
-myJsonStr = myJsonStr.replace('shri','Shri');
+myJsonStr = myJsonStr.replace('shri', 'Shri');
 console.log(myJsonStr);
 
 let newJsonObj = JSON.parse(myJsonStr);
@@ -83,7 +85,7 @@ console.log(newJsonObj);
 // TIMEOUTS
 // setTimeout() --> Allows us to run the function once after the interval of time
 // setInterval() --> Allows us to run the function repeatedly after the interval of time
-function greet(){
+function greet() {
     console.log("hello phoenix");
 }
 setTimeout(greet, 3000);
@@ -107,7 +109,7 @@ function hello2(str, callback) {
 function display() {
     console.log("operation successful");
 }
-hello2('shri',display);
+hello2('shri', display);
 
 
 
@@ -118,8 +120,8 @@ hello2('shri',display);
 
 // PROMISE
 const students = [
-    {name : 'rohan',age : 21},
-    {name : 'rahul',age : 23}
+    { name: 'rohan', age: 21 },
+    { name: 'rahul', age: 23 }
 ];
 function enroll(student) {
     return new Promise((resolve, reject) => {
@@ -127,25 +129,25 @@ function enroll(student) {
             students.push(student);
             console.log("enrolled");
             const flag = false;
-            if(!flag){
+            if (!flag) {
                 resolve();
             }
-            else{
+            else {
                 reject();
             }
-        },1000);
+        }, 1000);
     });
 }
 function getStudents() {
-    setTimeout(() =>{
+    setTimeout(() => {
         let str = "";
         students.forEach(student => {
             str += " " + student.name;
         })
         console.log(str);
-    },2000);
+    }, 2000);
 }
-let newStudent = {name : 'shri', age : 21};
+let newStudent = { name: 'shri', age: 21 };
 enroll(newStudent).then(getStudents).catch(() => {
     console.log("some error occured");
 });
@@ -179,13 +181,13 @@ res.then(data => console.log(data));
 
 // AJAX NOT USED MUCH (asynchronous java script xml)
 let ajaxbtn = document.getElementById('ajbtn');
-ajaxbtn.addEventListener('click',buttonHandler);
+ajaxbtn.addEventListener('click', buttonHandler);
 function buttonHandler() {
     console.log("clicked ajax button");
     const xhr = new XMLHttpRequest();
     // xhr.open('GET', 'http://jsonplaceholder.typicode.com/todos/1',true); 
-    xhr.open('POST', 'http://dummy.restapiexample.com/api/v1/create',true); // async for true
-    xhr.getResponseHeader('Content-Type','application/json');
+    xhr.open('POST', 'http://dummy.restapiexample.com/api/v1/create', true); // async for true
+    xhr.getResponseHeader('Content-Type', 'application/json');
     xhr.onprogress = () => {
         console.log("on progress");
     }
@@ -197,11 +199,11 @@ function buttonHandler() {
         if (this.status === 200) {
             console.log(this.responseText); // JSON.parse if json file
         }
-        else{
-            console.log("some error occurred");g
+        else {
+            console.log("some error occurred"); g
         }
     }
-    const params = {"name":"askdfjalsdkf","salary":"22342","age":"33"}
+    const params = { "name": "askdfjalsdkf", "salary": "22342", "age": "33" }
     xhr.send(params);
 }
 
@@ -228,14 +230,14 @@ function getData() {
 function postData() {
     url = "http://dummy.restapiexample.com/api/v1/create";
     data = '{"name":"shri","salary":"22342","age":"32"}';
-    header = { 
+    header = {
         method: 'post',
-        headers: { 'Content-Type': 'application/json'},
-        body : data
+        headers: { 'Content-Type': 'application/json' },
+        body: data
     };
-    fetch(url, header).then(response => response.json()).then(data => console.log(data)).catch(error =>console.log(error));
+    fetch(url, header).then(response => response.json()).then(data => console.log(data)).catch(error => console.log(error));
 }
-fetchbtn.addEventListener('click',() => {
+fetchbtn.addEventListener('click', () => {
     getData();
     // postData();  
 })
@@ -263,7 +265,7 @@ let str = "hello shri i am Shri shri loving this Shri"
 console.log(re);
 console.log(re.source);
 
-console.log(re.exec(str)); 
+console.log(re.exec(str));
 console.log(re.exec(str));
 console.log(re.test(str));
 console.log(str.match(re));
@@ -291,8 +293,8 @@ re = /Shri\*/;      // escaping *
 str = "Shri is Shriii Shhri Shhhri";
 if (re.test(str)) {
     console.log(re.source, "is present");
-}else{
-    console.log(re.source,"is not present");
+} else {
+    console.log(re.source, "is not present");
 }
 
 
@@ -305,11 +307,11 @@ if (re.test(str)) {
 
 
 // ITERATORS AND GENERATORS
-function iterator(values){
-    let index = 0 ;
-    return{
+function iterator(values) {
+    let index = 0;
+    return {
         next: () => {
-            if(index < values.length){
+            if (index < values.length) {
                 return {
                     value: values[index++],
                     done: false
@@ -329,9 +331,9 @@ console.log(fruits2.next().value);
 console.log(fruits2.next().value);
 console.log(fruits2.next().value);
 
-function* generator(){
+function* generator() {
     let i = 0;
-    while(true){
+    while (true) {
         yield i++;
     }
 }
@@ -374,7 +376,7 @@ mySet.has("shri");
 mySet.delete("hello");
 
 const myMap = new Map(); // we can use values in constructor
-const key1 = 'hey', key2 = {}, key3 = function () {};
+const key1 = 'hey', key2 = {}, key3 = function () { };
 myMap.set(key1, 'buddy');
 myMap.set(key2, 'this is a blank ibj');
 myMap.set(key3, 'this is a function');
@@ -383,6 +385,6 @@ console.log(myMap.keys());
 console.log(myMap.values());
 console.log(myMap.get(key1));
 console.log(Array.from(myMap.values()));
-for(let [key, value] of myMap) {
+for (let [key, value] of myMap) {
     console.log(key, value);
 }
